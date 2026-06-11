@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God of API - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a1a1a'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='%23d4af37' font-family='monospace'%3Eᚱ%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+    <header>
+        <h1>GOD OF API</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="activo">INICIO</a></li>
+                <li><a href="pages/personajes.html">PERSONAJES</a></li>
+                <li><a href="pages/reinos.html">REINOS</a></li>
+                <li><a href="pages/armas.html">ARMAS</a></li>
+                <li><a href="pages/enemigos.html">ENEMIGOS</a></li>
+                <li><a href="pages/objetos.html">OBJETOS</a></li>
+                <li><a href="pages/kratos.html">KRATOS</a></li>
+                <li><a href="pages/sobremi.html">SOBRE MÍ</a></li>
+            </ul>
+        </nav>
+        <button id="btnCerrarSesion" class="btn-cerrar-sesion" style="display: none;">CERRAR SESIÓN</button>
+    </header>
+
+    <main>
+        <h2>BIENVENIDO, GUERRERO</h2>
+
+        <div class="descripcion-inicio">
+            <p>God of API es una API REST creada por un gran fan de God of War. Aquí podrás consultar y gestionar
+                información del universo de God of War.</p>
+
+            <p class="subtexto">¿QUÉ PUEDES HACER?</p>
+            <ul>
+                <li>Consultar personajes, reinos y armas de la saga</li>
+                <li>Añadir nuevos personajes, reinos y armas</li>
+                <li>Editar y eliminar registros existentes</li>
+                <li>Explorar la página especial de Kratos</li>
+            </ul>
+
+            <p class="subtexto">EXPLORA LOS REINOS</p>
+            <div class="nav-cards">
+                <div class="card-link">
+                    <a href="pages/personajes.html">
+                        <h3>PERSONAJES</h3>
+                        <p>Gestiona los guerreros y dioses</p>
+                    </a>
+                </div>
+                <div class="card-link">
+                    <a href="pages/reinos.html">
+                        <h3>REINOS</h3>
+                        <p>Explora los 9 reinos nórdicos</p>
+                    </a>
+                </div>
+                <div class="card-link">
+                    <a href="pages/armas.html">
+                        <h3>ARMAS</h3>
+                        <p>Descubre armas legendarias</p>
+                    </a>
+                </div>
+                <div class="card-link">
+                    <a href="pages/kratos.html">
+                        <h3>KRATOS</h3>
+                        <p>El Dios de la Guerra</p>
+                    </a>
+                </div>
+                <div class="card-link">
+                    <a href="pages/enemigos.html">
+                        <h3>ENEMIGOS</h3>
+                        <p>Explora los enemigos de la saga</p>
+                    </a>
+                </div>
+                <div class="card-link">
+                    <a href="pages/objetos.html">
+                        <h3>OBJETOS</h3>
+                        <p>Descubre objetos legendarios</p>
+                    </a>
+                </div>
+                <div class="card-link">
+                    <a href="pages/sobremi.html">
+                        <h3>SOBRE MÍ</h3>
+                        <p>Descubre quién soy</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mapa-container">
+            <h2>MAPA DE MIDGARD</h2>
+            <iframe src="https://mapgenie.io/god-of-war-2018/maps/midgard?embed=light"
+                style="position: relative; width: 100%; height: 500px;" frameborder="0">
+            </iframe>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>God of API - Samuel Ruiz Martin | Desarrollo de Aplicaciones Multiplataforma</p>
+    </footer>
+
+    <script src="js/javascript.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/audio.js"></script>
+</body>
+
+</html>

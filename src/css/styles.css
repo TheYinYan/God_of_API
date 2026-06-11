@@ -1,0 +1,1162 @@
+/* ============================================
+   DESCRIPCIÓN DE INICIO
+   ============================================ */
+
+.descripcion-inicio,
+.mapa-container {
+    background: linear-gradient(145deg, #141414, #0a0a0a);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #4a90e2;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.descripcion-inicio p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.descripcion-inicio .subtexto {
+    color: #d4af37;
+    font-weight: bold;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+.descripcion-inicio ul {
+    display: inline-block;
+    text-align: left;
+    margin: 1rem auto;
+    padding-left: 2rem;
+}
+
+.descripcion-inicio li {
+    margin: 0.5rem 0;
+    color: #a0a0a0;
+    list-style-type: none;
+}
+
+.descripcion-inicio li::before {
+    content: '🔹';
+    color: #d4af37;
+    margin-right: 8px;
+}
+
+/* Modal de Login */
+.modal-login {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-login-contenido {
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    border-left: 3px solid #9e1a1a;
+    border-right: 1px solid #4a90e2;
+    border-bottom: 1px solid #4a90e2;
+    text-align: center;
+}
+
+.modal-login-contenido h2 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.modal-login-contenido .campo-formulario {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.modal-login-contenido label {
+    color: #4a90e2;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-login-contenido input {
+    width: 100%;
+    padding: 8px;
+    background: #0a0a0a;
+    border: 1px solid #4a90e2;
+    color: white;
+    border-radius: 5px;
+}
+
+#btnLoginModal {
+    background: linear-gradient(145deg, #9e1a1a, #7a1212);
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#btnLoginModal:hover {
+    background: #d4af37;
+    color: #1a1a1a;
+}
+
+.btn-cerrar-sesion {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(145deg, #9e1a1a, #7a1212);
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn-cerrar-sesion:hover {
+    background: #d4af37;
+    color: #1a1a1a;
+}
+
+/* ============================================
+   TARJETAS DE NAVEGACIÓN (index)
+   ============================================ */
+
+.nav-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card-link {
+    flex: 1;
+    min-width: 280px;
+    background: #0a0a0a;
+    border-left: 2px solid #9e1a1a;
+    transition: all 0.3s;
+}
+
+.card-link:hover {
+    transform: translateY(-5px);
+    border-left-color: #d4af37;
+}
+
+.card-link a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #c4c4c4;
+}
+
+.card-link a h3 {
+    color: #d4af37;
+    margin: 0 0 10px 0;
+}
+
+.card-link a p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* ============================================
+   ESTILOS BASE
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Georgia', 'Times New Roman', serif;
+    background: radial-gradient(circle at 20% 30%, #1a1a1a, #0a0a0a);
+    color: #c4c4c4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Efecto de niebla/viento nórdico de fondo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="none" stroke="%234a90e2" stroke-width="0.3" opacity="0.1" d="M10,20 Q30,10 50,20 T90,20 M5,40 Q25,30 45,40 T85,40 M15,60 Q35,50 55,60 T95,60 M8,80 Q28,70 48,80 T88,80"/></svg>');
+    background-repeat: repeat;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ============================================
+   HEADER - Estilo de Esparta
+   ============================================ */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('../assets/images/header-bg.png');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 3px solid #9e1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 200px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #d4af37 0%, #9e1a1a 50%, #d4af37 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(158, 26, 26, 0.4);
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+}
+
+/* Runas decorativas del header */
+header h1::before {
+    content: 'ᚱ ᚨ ᚷ ᚾ ᚨ ᚱ ᛟ ᚲ';
+    font-size: 0.6rem;
+    display: block;
+    color: #d4af37;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+    opacity: 0.6;
+}
+
+header h1::after {
+    content: 'ᚱ ᚨ ᚷ ᚾ ᚨ ᚱ ᛟ ᚲ';
+    font-size: 0.6rem;
+    display: block;
+    color: #d4af37;
+    letter-spacing: 5px;
+    margin-top: 5px;
+    opacity: 0.6;
+}
+
+/* ============================================
+   NAVEGACIÓN - Estilo de escudo
+   ============================================ */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    color: #c4c4c4;
+    padding: 0.7rem 1.3rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+    border-top: 2px solid #4a90e2;
+    border-bottom: 2px solid #4a90e2;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: #9e1a1a;
+    color: #ffffff;
+    border-top-color: #d4af37;
+    border-bottom-color: #d4af37;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a.activo {
+    background: #9e1a1a;
+    color: #ffffff;
+    border-top-color: #d4af37;
+    border-bottom-color: #d4af37;
+    box-shadow: 0 0 15px rgba(158, 26, 26, 0.6);
+}
+
+/* ============================================
+   MAIN
+   ============================================ */
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4a90e2;
+    font-size: 1.8rem;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+main h2::before,
+main h2::after {
+    content: '✦';
+    color: #d4af37;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   BOTONES - Estilo espartano
+   ============================================ */
+
+.tarjeta-crear {
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border-left: 3px solid #9e1a1a;
+    border-right: 1px solid #4a90e2;
+    border-bottom: 1px solid #4a90e2;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+}
+
+.btn-crear {
+    background: linear-gradient(145deg, #9e1a1a, #7a1212);
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-crear:hover {
+    background: #d4af37;
+    color: #1a1a1a;
+    border-color: #9e1a1a;
+}
+
+.mensaje-ayuda {
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.btn-modo {
+    background: transparent;
+    color: #4a90e2;
+    border: 1px solid #4a90e2;
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-modo.activo {
+    background: #4a90e2;
+    color: #1a1a1a;
+    border-color: #d4af37;
+}
+
+.btn-modo:hover {
+    background: #4a90e2;
+    color: #1a1a1a;
+}
+
+/* ============================================
+   FORMULARIO DE CREACIÓN - Estilo pergamino
+   ============================================ */
+
+#formularioCreacion {
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 3px solid #9e1a1a;
+    border-right: 1px solid #4a90e2;
+    border-bottom: 1px solid #4a90e2;
+    position: relative;
+}
+
+#formularioCreacion::before {
+    content: 'ᚱ ᚨ ᚷ ᚾ ᚨ ᚱ ᛟ ᚲ';
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.6rem;
+    color: #d4af37;
+    opacity: 0.3;
+}
+
+#formularioCreacion h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+}
+
+#formularioCreacion .campo-formulario {
+    margin-bottom: 12px;
+}
+
+#formularioCreacion label {
+    display: inline-block;
+    width: 120px;
+    color: #4a90e2;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+#formularioCreacion input,
+#formularioCreacion select {
+    background-color: #0a0a0a;
+    border: 1px solid #4a90e2;
+    color: #c4c4c4;
+    padding: 8px 12px;
+    width: 250px;
+}
+
+#btnGuardar {
+    background: linear-gradient(145deg, #2d5a2a, #1e3a1c);
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#btnGuardar:hover {
+    background: #d4af37;
+    color: #1a1a1a;
+    border-color: #2d5a2a;
+}
+
+#btnCancelar {
+    background: linear-gradient(145deg, #9e1a1a, #7a1212);
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#btnCancelar:hover {
+    background: #d4af37;
+    color: #1a1a1a;
+    border-color: #9e1a1a;
+}
+
+/* ============================================
+   CONTENEDOR DE TARJETAS
+   ============================================ */
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   TARJETAS - Estilo pergamino vikingo
+   ============================================ */
+
+.tarjeta {
+    background: linear-gradient(145deg, #161616, #0c0c0c);
+    border-radius: 0;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid #9e1a1a;
+    border-right: 1px solid #4a90e2;
+    border-bottom: 1px solid #4a90e2;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta::before {
+    content: 'ᚱ';
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 2rem;
+    color: #d4af37;
+    opacity: 0.1;
+    font-family: monospace;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    border-left-color: #d4af37;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 10px rgba(74, 144, 226, 0.2);
+}
+
+.tarjeta h3 {
+    background: linear-gradient(135deg, #d4af37, #9e1a1a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    font-family: 'Georgia', serif;
+    border-left: 2px solid #9e1a1a;
+    padding-left: 0.75rem;
+}
+
+.tarjeta p {
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.tarjeta .categoria {
+    display: inline-block;
+    background: rgba(158, 26, 26, 0.2);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    color: #d4af37;
+    border: 1px solid #9e1a1a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tarjeta .extra {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #888;
+    border-top: 1px dashed #9e1a1a;
+    padding-top: 0.5rem;
+}
+
+/* ============================================
+   BOTONES DE TARJETA (modo edición)
+   ============================================ */
+
+.tarjeta .botones-accion {
+    display: none;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tarjeta.modo-edicion .botones-accion {
+    display: flex;
+}
+
+.btn-editar {
+    background: transparent;
+    color: #4a90e2;
+    border: 1px solid #4a90e2;
+    padding: 5px 10px;
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.btn-editar:hover {
+    background: #4a90e2;
+    color: #1a1a1a;
+}
+
+.btn-eliminar {
+    background: transparent;
+    color: #9e1a1a;
+    border: 1px solid #9e1a1a;
+    padding: 5px 10px;
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.btn-eliminar:hover {
+    background: #9e1a1a;
+    color: #d4af37;
+}
+
+/* ============================================
+   MODAL PARA EDITAR
+   ============================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    border-left: 3px solid #9e1a1a;
+    border-right: 1px solid #4a90e2;
+    border-bottom: 1px solid #4a90e2;
+    position: relative;
+}
+
+.modal-contenido::before {
+    content: 'ᚱ';
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: #d4af37;
+    opacity: 0.1;
+}
+
+.modal-contenido h3 {
+    color: #d4af37;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+}
+
+.modal-contenido .campo-formulario {
+    margin-bottom: 12px;
+}
+
+.modal-contenido label {
+    display: inline-block;
+    width: 120px;
+    color: #4a90e2;
+    font-size: 0.85rem;
+}
+
+.modal-contenido input,
+.modal-contenido select {
+    background-color: #0a0a0a;
+    border: 1px solid #4a90e2;
+    color: #c4c4c4;
+    padding: 8px 12px;
+    width: 250px;
+}
+
+#btnGuardarEditar {
+    background: linear-gradient(145deg, #2d5a2a, #1e3a1c);
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+#btnGuardarEditar:hover {
+    background: #d4af37;
+    color: #1a1a1a;
+    border-color: #2d5a2a;
+}
+
+#btnCerrarModal {
+    background: linear-gradient(145deg, #9e1a1a, #7a1212);
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 5px 10px;
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+#btnCerrarModal:hover {
+    background: #d4af37;
+    color: #1a1a1a;
+    border-color: #9e1a1a;
+}
+
+/* ============================================
+   FILTROS PARA ENEMIGOS
+   ============================================ */
+
+.filtros-enemigos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.filtro-btn {
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    color: #c4c4c4;
+    border: 1px solid #4a90e2;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filtro-btn:hover {
+    background: #4a90e2;
+    color: #1a1a1a;
+}
+
+.filtro-btn.active {
+    background: #9e1a1a;
+    color: #d4af37;
+    border-color: #d4af37;
+}
+
+/* ============================================
+   ESTILOS PARA KRATOS
+   ============================================ */
+
+#contenedorKratos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Tarjeta principal de Kratos */
+.kratos-card {
+    flex: 1;
+    min-width: 300px;
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border-left: 3px solid #9e1a1a;
+    border-right: 1px solid #4a90e2;
+    border-bottom: 1px solid #4a90e2;
+    padding: 20px;
+    position: relative;
+}
+
+.kratos-card h2 {
+    color: #d4af37;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+}
+
+.kratos-card h2::before,
+.kratos-card h2::after {
+    content: '';
+    display: none;
+}
+
+.kratos-card p {
+    margin: 10px 0;
+    color: #c4c4c4;
+}
+
+.kratos-card strong {
+    color: #d4af37;
+}
+
+.kratos-card .avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+    margin: 1rem auto;
+    display: block;
+}
+
+/* Sección de armas y objetos */
+.kratos-armas,
+.kratos-objetos {
+    flex: 1;
+    min-width: 250px;
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border-left: 2px solid #4a90e2;
+    border-right: 1px solid #4a90e2;
+    border-bottom: 1px solid #4a90e2;
+    padding: 20px;
+}
+
+.kratos-armas h2,
+.kratos-objetos h2 {
+    color: #d4af37;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+
+.kratos-armas .item,
+.kratos-objetos .item {
+    background: #0a0a0a;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 2px solid #4a90e2;
+    transition: all 0.3s;
+}
+
+.kratos-armas .item:hover,
+.kratos-objetos .item:hover {
+    border-left-color: #d4af37;
+}
+
+.kratos-armas .item strong,
+.kratos-objetos .item strong {
+    color: #d4af37;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.kratos-armas .item p,
+.kratos-objetos .item p {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0;
+}
+
+/* Estilo para el vídeo en la página de Kratos */
+.video-kratos {
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border-left: 3px solid #9e1a1a;
+    border-right: 1px solid #4a90e2;
+    border-bottom: 1px solid #4a90e2;
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+.video-kratos h2 {
+    color: #d4af37;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+}
+
+.video-kratos iframe {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid #4a90e2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .video-kratos h2 {
+        font-size: 1.2rem;
+    }
+
+    .video-kratos iframe {
+        height: 200px;
+    }
+}
+
+/* ============================================
+   ESTILOS PARA SOBRE MÍ
+   ============================================ */
+
+.sobremi-card {
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    border-left: 3px solid #9e1a1a;
+    border-right: 1px solid #4a90e2;
+    border-bottom: 1px solid #4a90e2;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+}
+
+.sobremi-card::before {
+    content: 'ᚱ';
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: #d4af37;
+    opacity: 0.1;
+}
+
+.sobremi-card .avatar {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.sobremi-card .img-sobremi {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #d4af37;
+    margin: 1rem auto;
+    display: block;
+}
+
+.sobremi-card h3 {
+    color: #d4af37;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.sobremi-card .rol {
+    color: #4a90e2;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.sobremi-card .email {
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.sobremi-card .fecha {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.sobremi-card .descripcion {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #0a0a0a;
+    border-left: 2px solid #9e1a1a;
+    text-align: left;
+}
+
+.sobremi-card .descripcion p {
+    margin: 0.5rem 0;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+.sobremi-card .runas {
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    color: #d4af37;
+    letter-spacing: 2px;
+}
+
+/* Estilo específico para la tarjeta de sobremi en el contenedor de tarjetas */
+.contenedor-tarjetas .sobremi-card {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+/* Formulario de creación */
+#formularioCreacion {
+    display: none;
+}
+
+#formularioCreacion.active {
+    display: block;
+}
+
+/* ============================================
+   ESTADOS
+   ============================================ */
+
+.cargando {
+    text-align: center;
+    color: #4a90e2;
+    font-size: 1.2rem;
+    padding: 3rem;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.error {
+    text-align: center;
+    color: #9e1a1a;
+    font-size: 1.1rem;
+    padding: 2rem;
+    background: rgba(158, 26, 26, 0.1);
+    border: 1px solid #9e1a1a;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 0 #4a90e2;
+    }
+
+    50% {
+        opacity: 0.7;
+        text-shadow: 0 0 10px #4a90e2;
+    }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    background: linear-gradient(180deg, #0a0a0a, #050505);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    border-top: 1px solid #9e1a1a;
+    font-size: 0.8rem;
+    color: #555;
+    font-family: monospace;
+}
+
+footer::before {
+    content: 'ᛏᚺᛖ ᚷᛟᛞ ᛟᚠ ᚹᚨᚱ';
+    display: block;
+    margin-bottom: 8px;
+    color: #d4af37;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9e1a1a;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d4af37;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h1::before,
+    header h1::after {
+        font-size: 0.4rem;
+    }
+
+    nav ul li a {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    main h2 {
+        font-size: 1.3rem;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    #formularioCreacion label {
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    #formularioCreacion input {
+        width: 100%;
+    }
+
+    .modal-contenido label {
+        width: 100%;
+        display: block;
+    }
+
+    .modal-contenido input {
+        width: 100%;
+    }
+
+    #contenedorKratos {
+        flex-direction: column;
+    }
+}
