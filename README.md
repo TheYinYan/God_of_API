@@ -1,4 +1,4 @@
-# God of API
+# [God of API](https://god-of-apiz.onrender.com)
 
 > _"El ciclo termina aquí. No hay más caminos que recorrer."_ — Kratos
 
@@ -33,6 +33,11 @@ God of API es una aplicación web que permite consultar y gestionar información
 | **Frontend** | HTML5, CSS3, JavaScript | Servido por Express (mismo servidor) |
 
 ---
+
+## Como iniciar el proyecto
+
+Desde este enlace puedes acceder a la aplicación:
+[God of API](https://god-of-apiz.onrender.com)
 
 ## 🎯 Objetivos del proyecto
 
