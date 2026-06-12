@@ -87,7 +87,7 @@ function mostrarKratos(kratos, armas, objetos) {
     contenedor.innerHTML = `
         <div class="kratos-card">
             <h2>${kratos.nombre || 'Kratos'}</h2>
-            <img src="${kratos.imagen || 'nada'}" alt="${kratos.nombre || 'Kratos'}" class="avatar">
+            <img src="${kratos.imagen || '../assets/images/Kratos.jfif'}" alt="${kratos.nombre || 'Kratos'}" class="avatar">
             <p><strong>Descripción:</strong> ${kratos.descripcion || 'Sin descripción'}</p>
             ${kratos.arma_principal ? `<p><strong>Arma principal:</strong> ${kratos.arma_principal}</p>` : ''}
             ${kratos.categoria ? `<p><strong>Categoría:</strong> ${kratos.categoria}</p>` : ''}
