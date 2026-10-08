@@ -1,7 +1,5 @@
 # [God of API](https://god-of-apiz.onrender.com)
 
-> _"El ciclo termina aquí. No hay más caminos que recorrer."_ — Kratos
-
 <div align="center">
 
 ![Version](https://img.shields.io/badge/version-4.0-red)
@@ -238,4 +236,6 @@ god-of-api/
 ### ᛏᚺᛖ ᚷᛟᛞ ᛟᚠ ᚹᚨᚱ ᛁᛋ ᚾᛟᛏ ᚨᛚᛟᚾᛖ
 
 **GOD OF API - Hecho con ❤️ para los fans de God of War**
+
+> _"El ciclo termina aquí. No hay más caminos que recorrer."_ — Kratos
 </div>
